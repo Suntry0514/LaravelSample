@@ -9,7 +9,7 @@ class HelloComposer
 
     public function compose(View $view)
     {
-        $view->with('view_message', 'this view is " from composer'
+        $view->with('view_message', 'this view is " from composer　　'
             . $view->getName() . '"!!');
     }
 }

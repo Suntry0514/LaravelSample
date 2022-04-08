@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+//global宣言することで変数がファイル全体で使用できるようになる
 global $head, $style, $body, $end;
 $head = '<html><head>';
 $style = <<<EOF

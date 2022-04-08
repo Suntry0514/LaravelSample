@@ -51,6 +51,7 @@ class HelloValidateController extends Controller
         return view('validate.index', ['msg' => '正しく入力されました！']);
     }
 
+
     //バリデータを使用したチェック
     // public function post(Request $request)
     // {

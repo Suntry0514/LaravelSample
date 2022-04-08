@@ -26,7 +26,7 @@ class HelloServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //クロージャーで記載する方法
+        //クロージャーで記載する方法。ここで適用するビューを指定している
         view()->composer('provider.index', function ($view) {
             //ビューに変数を追加するためのメソッド
             $view->with('view_message', 'composer message!');
@@ -37,7 +37,8 @@ class HelloServiceProvider extends ServiceProvider
 
 
 
-        //オリジナルのバリデーションルールを記載
+        //オリジナルのバリデーションルールを記載。app\http\validatorsフォルダ内にあるファイルでルールを定義している
+        //Validatorを継承したクラスを作成するバージョン
         $validator = $this->app['validator']; //おまじない
         //resolver：リゾルブ(バリデーションの処理を行う)の処理を設定する
         $validator->resolver(function (

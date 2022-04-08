@@ -41,6 +41,7 @@
             @error('mail')
                 <tr>
                     <th>ERROR</th>
+                    {{-- errorディレクティブ内では$messageにエラーメッセージが渡される --}}
                     <td>{{ $message }}</td>
                 </tr>
             @enderror

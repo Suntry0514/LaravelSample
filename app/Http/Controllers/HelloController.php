@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 class HelloController extends Controller
-{    public function index($msg='no, message'){
-    return <<<EOF
+{
+    public function index($msg = 'no, message')
+    {
+        return <<<EOF
 <html>
 <head>
 <meta charset="UTF-8">

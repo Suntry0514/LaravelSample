@@ -126,8 +126,8 @@ Route::post('session/comfirm', [SessionController::class, 'ses_put']);
 
 //pagenation & Authを使用
 //middleware('auth')を記載することによってログイン必須となる。ログインしていない場合、ログインページへリダイレクトされる
-Route::get('pagination', [PaginationController::class, 'index'])->middleware('auth');
-Route::get('pagination/auth', [App\Http\Controllers\PaginationController::class,'getAuth']);
+Route::get('pagination', [PaginationController::class, 'index'])->middleware('auth');//元から用意されているauthを使用
+Route::get('pagination/auth', [App\Http\Controllers\PaginationController::class,'getAuth']);//オリジナルで作成したauth
 Route::post('pagination/auth', [PaginationController::class, 'postAuth']);
 
 Auth::routes();
